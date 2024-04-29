@@ -65,6 +65,10 @@ export class Spy extends RuntimeModule<SpyConfig> {
             'Agent not active'
         )
         assert(
+            spyStatus.securityKey.greaterThanOrEqual(10),
+            'Invalid security key'
+        )
+        assert(
             spyStatus.securityKey.lessThan(100),
             'Invalid security key'
         )
